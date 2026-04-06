@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología de la Investigación - Ph.D. Juan Sandoval Herrera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        .section-nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.9); }
+        .loader { border: 3px solid #f3f3f3; border-radius: 50%; border-top: 3px solid #3b82f6; width: 20px; height: 20px; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .glass-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- PORTADA -->
+    <header class="hero-gradient text-white min-h-screen flex flex-col justify-center items-center text-center p-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
+        </div>
+        <div class="relative z-10 animate-fade-in">
+            <h2 class="text-xl md:text-2xl font-light mb-4 tracking-widest uppercase">Universidad de América</h2>
+            <h1 class="text-4xl md:text-7xl font-bold mb-2">Metodología de la Investigación</h1>
+            <h3 class="text-2xl md:text-4xl font-light text-blue-300 mb-8">Evolución y Prospectiva de las Rutas Científicas</h3>
+            <div class="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            <p class="text-xl md:text-2xl mb-2">Profesor Ph.D. Juan Sandoval Herrera</p>
+            <p class="text-lg opacity-80">Ciclo Académico 2026</p>
+        </div>
+        <a href="#introduccion" class="mt-12 animate-bounce bg-white text-blue-900 p-3 rounded-full shadow-lg relative z-10">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="section-nav border-b hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <span class="font-bold text-blue-900 uppercase tracking-tighter">M.I. Ph.D. Sandoval</span>
+            <div class="flex space-x-6 text-xs font-bold uppercase">
+                <a href="#introduccion" class="hover:text-blue-600 transition">Introducción</a>
+                <a href="#coherencia" class="hover:text-blue-600 transition">Claridad Conceptual</a>
+                <a href="#laboratorio" class="text-blue-600 border-b-2 border-blue-600">Laboratorio IA ✨</a>
+                <a href="#rutas" class="hover:text-blue-600 transition">Rutas y Alcances</a>
+                <a href="#casos" class="hover:text-blue-600 transition">Casos 2020-25</a>
+                <a href="#conclusiones" class="hover:text-blue-600 transition">Cierre</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INTRODUCCIÓN DETALLADA -->
+    <section id="introduccion" class="py-24 max-w-5xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <div class="inline-block p-2 bg-blue-100 text-blue-700 rounded-lg mb-6 font-semibold text-xs uppercase tracking-wider">Epistemología Aplicada</div>
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">La ciencia como rastreo de la realidad</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                    Etimológicamente, <strong>investigar</strong> proviene del latín <i>investigare</i>, que remite a la acción de seguir pistas o indagar. En el ámbito académico contemporáneo, entendemos la investigación como un conjunto de procesos críticos, empíricos y sistemáticos aplicados al estudio de un fenómeno.
+                </p>
+                <div class="bg-gray-100 p-6 rounded-2xl border-l-4 border-blue-600">
+                    <p class="italic text-gray-700">"¿Es la realidad una sola y absoluta, o es una construcción múltiple de nuestras mentes?"</p>
+                </div>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="bg-blue-600 text-white p-6 rounded-2xl text-center">
+                    <span class="text-3xl font-bold block mb-2">3</span>
+                    <span class="text-xs uppercase font-bold opacity-80">Rutas Metodológicas</span>
+                </div>
+                <div class="bg-slate-800 text-white p-6 rounded-2xl text-center">
+                    <span class="text-3xl font-bold block mb-2">4</span>
+                    <span class="text-xs uppercase font-bold opacity-80">Alcances Cuantitativos</span>
+                </div>
+                <div class="bg-slate-100 p-6 rounded-2xl text-center col-span-2">
+                    <span class="text-lg font-bold block mb-1">Pragmatismo</span>
+                    <span class="text-xs text-gray-500 italic">La "Tercera Vía" del siglo XXI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLARIDAD CONCEPTUAL: EL TRIÁNGULO -->
+    <section id="coherencia" class="py-24 bg-slate-900 text-white px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Arquitectura de la Coherencia</h2>
+            <p class="text-blue-300 mb-16 max-w-2xl mx-auto">El rigor no depende del método, sino de que estas tres piezas encajen perfectamente.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- PARADIGMA -->
+                <div class="p-8 border border-white/10 rounded-3xl glass-card text-left">
+                    <div class="w-12 h-12 bg-yellow-400 text-blue-900 rounded-full flex items-center justify-center font-bold mb-6">1</div>
+                    <h3 class="text-2xl font-bold mb-4">Paradigma</h3>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        Es la visión del mundo y el sistema de creencias que guía la indagación. Determina qué es la realidad (Ontología) y cómo se conoce (Epistemología).
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/10 text-xs text-yellow-400 font-mono italic">
+                        Ej: Positivismo, Constructivismo.
+                    </div>
+                </div>
+
+                <!-- ENFOQUE -->
+                <div class="p-8 border border-white/10 rounded-3xl glass-card text-left">
+                    <div class="w-12 h-12 bg-blue-400 text-blue-900 rounded-full flex items-center justify-center font-bold mb-6">2</div>
+                    <h3 class="text-2xl font-bold mb-4">Enfoque (Ruta)</h3>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        Es la estrategia lógica dominante. Define si el proceso será secuencial y probatorio o circular e interpretativo.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/10 text-xs text-blue-400 font-mono italic">
+                        Ej: Cuantitativo, Cualitativo, Mixto.
+                    </div>
+                </div>
+
+                <!-- DISEÑO -->
+                <div class="p-8 border border-white/10 rounded-3xl glass-card text-left">
+                    <div class="w-12 h-12 bg-green-400 text-blue-900 rounded-full flex items-center justify-center font-bold mb-6">3</div>
+                    <h3 class="text-2xl font-bold mb-4">Diseño</h3>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        Es el plan operativo o abordaje práctico para obtener la información necesaria. Son los planos técnicos de la obra.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/10 text-xs text-green-400 font-mono italic">
+                        Ej: Experimento, Etnografía, DEXPLIS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LABORATORIO IA ✨ -->
+    <section id="laboratorio" class="py-24 bg-white px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-blue-600 text-white rounded-2xl shadow-lg">
+                    <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold">Laboratorio Metodológico ✨</h2>
+                    <p class="text-gray-500">Asistente avanzado basado en Gemini 2.5 Flash</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <textarea id="ai-input" rows="3" class="w-full p-6 rounded-2xl border-2 border-transparent focus:border-blue-500 outline-none transition text-lg shadow-inner mb-6" placeholder="Escribe tu idea de tesis o problema aquí..."></textarea>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="askGemini('ruta')" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold transition flex items-center gap-2 active:scale-95 shadow-md">
+                        Analizar Coherencia ✨
+                    </button>
+                    <button onclick="askGemini('pregunta')" class="bg-slate-800 hover:bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold transition flex items-center gap-2 active:scale-95 shadow-md">
+                        Formular Pregunta ✨
+                    </button>
+                </div>
+
+                <div id="ai-loading" class="hidden flex flex-col items-center justify-center py-12">
+                    <div class="loader mb-4"></div>
+                    <p class="text-blue-600 font-bold animate-pulse">Consultando al Ph.D. Digital...</p>
+                </div>
+
+                <div id="ai-response-container" class="hidden mt-8 bg-white p-8 rounded-2xl border-2 border-blue-100 shadow-xl animate-fade-in">
+                    <div class="flex items-center justify-between mb-6 border-b pb-4">
+                        <span class="text-blue-600 font-bold flex items-center gap-2 uppercase text-xs tracking-widest"><i class="fa-solid fa-robot"></i> Meta-Análisis</span>
+                        <button onclick="document.getElementById('ai-response-container').classList.add('hidden')" class="text-gray-400 hover:text-red-500"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div id="ai-response" class="prose prose-blue max-w-none text-gray-700"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RUTAS, ALCANCES Y DISEÑOS (DETALLADO) -->
+    <section id="rutas" class="py-24 bg-gray-50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center">Exploración de las Rutas</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-16 mb-24">
+                <!-- RUTA CUANTITATIVA -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"><i class="fa-solid fa-chart-simple"></i></div>
+                        <h3 class="text-3xl font-bold text-blue-900">Ruta Cuantitativa</h3>
+                    </div>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Se basa en el <strong>Positivismo</strong>. El investigador es neutral, busca la objetividad y generalizar resultados de una muestra a una población. El proceso es rigurosamente secuencial.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-blue-600">
+                            <h4 class="font-bold text-blue-900 mb-2">Alcances del Estudio:</h4>
+                            <ul class="text-sm space-y-3">
+                                <li><strong>Exploratorio:</strong> Temas poco estudiados (ej: impacto de una nueva IA).</li>
+                                <li><strong>Descriptivo:</strong> Mide propiedades y rasgos con precisión (ej: Censos).</li>
+                                <li><strong>Correlacional:</strong> Asociación entre variables (ej: Horas de estudio vs Calificación).</li>
+                                <li><strong>Explicativo:</strong> Determina causas (ej: Por qué sucede el fenómeno).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUTA CUALITATIVA -->
+                <div>
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="bg-green-600 text-white w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"><i class="fa-solid fa-comments"></i></div>
+                        <h3 class="text-3xl font-bold text-green-900">Ruta Cualitativa</h3>
+                    </div>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Fundada en el <strong>Constructivismo</strong>. Busca comprender los significados en su contexto natural. El investigador es el instrumento principal de recolección.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-green-600">
+                            <h4 class="font-bold text-green-900 mb-2">Diseños de Abordaje:</h4>
+                            <ul class="text-sm space-y-3">
+                                <li><strong>Etnografía:</strong> Describe y analiza culturas y comunidades sociales.</li>
+                                <li><strong>Fenomenología:</strong> Explora la esencia de las experiencias vividas.</li>
+                                <li><strong>Teoría Fundamentada:</strong> La teoría emerge directamente de los datos.</li>
+                                <li><strong>Investigación-Acción:</strong> Resuelve problemas sociales mediante intervención.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RUTA MIXTA Y TABLA -->
+            <div class="bg-white rounded-3xl p-10 shadow-xl border mb-24">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/3">
+                        <h3 class="text-3xl font-bold text-purple-900 mb-4">Ruta Mixta: La Integración</h3>
+                        <p class="text-sm text-gray-600 mb-6 italic">Fórmula: $1 + 1 = 3$ (Meta-inferencia)</p>
+                        <p class="text-sm text-gray-500 mb-4">Basada en el <strong>Pragmatismo</strong>. No es solo sumar técnicas, es hibridar el análisis para generar conclusiones superiores.</p>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] uppercase font-bold text-purple-600">
+                            <div class="bg-purple-50 p-2 rounded">DEXPLOS</div>
+                            <div class="bg-purple-50 p-2 rounded">DEXPLIS</div>
+                            <div class="bg-purple-50 p-2 rounded">Convergente</div>
+                            <div class="bg-purple-50 p-2 rounded">Integrado</div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 overflow-x-auto">
+                        <table class="w-full text-xs">
+                            <thead class="bg-slate-800 text-white">
+                                <tr>
+                                    <th class="p-3">Característica</th>
+                                    <th class="p-3">Cuantitativo</th>
+                                    <th class="p-3">Cualitativo</th>
+                                    <th class="p-3">Mixto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-3 font-bold bg-slate-50">Lógica</td>
+                                    <td class="p-3">Deductiva</td>
+                                    <td class="p-3">Inductiva</td>
+                                    <td class="p-3">Abductiva</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3 font-bold bg-slate-50">Realidad</td>
+                                    <td class="p-3">Objetiva / Única</td>
+                                    <td class="p-3">Subjetiva / Múltiple</td>
+                                    <td class="p-3">Mixta / Singular-Múltiple</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3 font-bold bg-slate-50">Objetivo</td>
+                                    <td class="p-3">Generalizar</td>
+                                    <td class="p-3">Comprender profundidad</td>
+                                    <td class="p-3">Perspectiva holística</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EJEMPLOS DE INVESTIGACIONES RECIENTES (2020-2025) -->
+    <section id="casos" class="py-24 bg-slate-900 text-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Vigilancia Científica 2020-2025</h2>
+                <p class="text-gray-400">Casos reales analizados en clase</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CUANTI -->
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <span class="text-blue-400 font-bold text-xs uppercase tracking-widest">Cuantitativo (2024)</span>
+                    <h4 class="text-xl font-bold mt-4 mb-4">Tecnología y Rendimiento Escolar</h4>
+                    <p class="text-sm text-gray-400 mb-6">Castelo Barreno utilizó análisis estadístico para determinar patrones objetivos de adopción tecnológica y brechas de acceso tras la pandemia.</p>
+                    <div class="text-[10px] text-gray-500 border-t border-white/10 pt-4 italic">Alcance: Descriptivo-Correlacional</div>
+                </div>
+                <!-- CUALI -->
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <span class="text-green-400 font-bold text-xs uppercase tracking-widest">Cualitativo (2025)</span>
+                    <h4 class="text-xl font-bold mt-4 mb-4">Voces de Resiliencia Docente</h4>
+                    <p class="text-sm text-gray-400 mb-6">Haro Sarango et al. exploraron mediante narrativas las vivencias subjetivas y mecanismos de agencia de docentes rurales en Ecuador.</p>
+                    <div class="text-[10px] text-gray-500 border-t border-white/10 pt-4 italic">Diseño: Narrativo-Fenomenológico</div>
+                </div>
+                <!-- MIXTO -->
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <span class="text-purple-400 font-bold text-xs uppercase tracking-widest">Mixto (2024)</span>
+                    <h4 class="text-xl font-bold mt-4 mb-4">ChatGPT en Educación Superior</h4>
+                    <p class="text-sm text-gray-400 mb-6">Evaluación de calidad de proyectos (cuanti) + Análisis de coherencia de textos (cuali) para medir el impacto de la IA generativa.</p>
+                    <div class="text-[10px] text-gray-500 border-t border-white/10 pt-4 italic">Diseño: Convergente Paralelo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCLUSIONES -->
+    <section id="conclusiones" class="py-24 max-w-4xl mx-auto px-6">
+        <div class="bg-white shadow-2xl rounded-[3rem] p-12 border border-slate-100">
+            <h2 class="text-4xl font-bold text-blue-900 mb-8">Síntesis Final</h2>
+            <div class="prose prose-blue text-gray-600 mb-12">
+                <p>
+                    La investigación en el siglo XXI no se trata de bandos, sino de <strong>utilidad y rigor</strong>. Como docentes investigadores, debemos ser "arquitectos metodológicos" capaces de seleccionar y combinar las mejores herramientas disponibles.
+                </p>
+                <ul>
+                    <li>El rigor es <strong>coherencia</strong> entre lo que crees (paradigma) y lo que haces (diseño).</li>
+                    <li>La ruta mixta es la respuesta a la complejidad del mundo globalizado.</li>
+                    <li>La IA no sustituye al investigador, pero potencia su capacidad de análisis y síntesis.</li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6 p-6 bg-blue-50 rounded-2xl">
+                <div class="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-bold italic">JS</div>
+                <div>
+                    <p class="font-bold text-blue-900">Ph.D. Juan Sandoval Herrera</p>
+                    <p class="text-sm text-blue-600 uppercase font-bold tracking-widest">Cátedra 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIBLIOGRAFÍA COMPLETA -->
+    <footer id="bibliografia" class="bg-slate-900 text-gray-500 py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-12 border-b border-white/10 pb-4">Bibliografía Técnica y Referencias</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-[10px] leading-relaxed uppercase tracking-tighter">
+                <div>
+                    <ul class="space-y-4">
+                        <li><strong>Hernández-Sampieri, R. & Mendoza, C. (2018).</strong> Metodología de la investigación: las rutas cuantitativa, cualitativa y mixta. McGraw-Hill.</li>
+                        <li><strong>Creswell, J. W. & Plano Clark, V. L. (2018).</strong> Designing and Conducting Mixed Methods Research. Sage.</li>
+                        <li><strong>Tashakkori, A. & Teddlie, C. (2009).</strong> Foundations of Mixed Methods Research. Sage.</li>
+                        <li><strong>Mertens, D. M. (2010).</strong> Research and Evaluation in Education and Psychology.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-4">
+                        <li><strong>Akerblad, L., Seppänen-Järvelä, R. & Haapakoski, P. (2021).</strong> Integrative Strategies in Mixed Methods Research.</li>
+                        <li><strong>Castelo Barreno (2024).</strong> La tecnología educativa y su influencia en la experiencia de aprendizaje. SciELO.</li>
+                        <li><strong>Puche-Villalobos (2024).</strong> Inteligencia Artificial como herramienta educativa: Ventajas y Desventajas.</li>
+                        <li><strong>Haro Sarango et al. (2025).</strong> Voces de resiliencia: Vivencias de docentes rurales ecuatorianos.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-20 flex justify-center gap-8 border-t border-white/5 pt-12">
+                <a href="https://www.youtube.com/watch?v=A8vK_9-XFz8" target="_blank" class="hover:text-white transition uppercase font-bold text-[10px] tracking-widest"><i class="fa-brands fa-youtube text-red-500 mr-2"></i> Rutas Sampieri</a>
+                <a href="https://www.youtube.com/watch?v=F07X6a8A-jI" target="_blank" class="hover:text-white transition uppercase font-bold text-[10px] tracking-widest"><i class="fa-brands fa-youtube text-red-500 mr-2"></i> Paradigmas</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const apiKey = "";
+        
+        async function askGemini(type) {
+            const userInput = document.getElementById('ai-input').value.trim();
+            if (!userInput) return alert("Describe tu idea primero ✨");
+
+            const loading = document.getElementById('ai-loading');
+            const container = document.getElementById('ai-response-container');
+            const responseDiv = document.getElementById('ai-response');
+
+            loading.classList.remove('hidden');
+            container.classList.add('hidden');
+
+            const systemPrompt = "Eres un consultor experto en metodología de investigación para el Ph.D. Juan Sandoval Herrera. Tu tono es académico pero inspirador. Te basas estrictamente en la teoría de Hernández-Sampieri.";
+            let prompt = type === 'ruta' 
+                ? `Para la idea "${userInput}": Sugiere Ruta, Paradigma y Diseño. Explica la coherencia interna.`
+                : `Para la idea "${userInput}": Formula una pregunta de investigación científica con su alcance.`;
+
+            const fetchWithRetry = async (url, options, retries = 5, backoff = 1000) => {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) throw new Error();
+                    return await response.json();
+                } catch (e) {
+                    if (retries <= 0) throw e;
+                    await new Promise(r => setTimeout(r, backoff));
+                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                }
+            };
+
+            try {
+                const res = await fetchWithRetry(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] }
+                    })
+                });
+
+                const text = res.candidates?.[0]?.content?.parts?.[0]?.text || "Error al procesar.";
+                responseDiv.innerHTML = text.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                loading.classList.add('hidden');
+                container.classList.remove('hidden');
+                container.scrollIntoView({ behavior: 'smooth' });
+            } catch (e) {
+                loading.classList.add('hidden');
+                alert("Error de conexión con la IA.");
+            }
+        }
+
+        // Animación básica de entrada
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const obs = new IntersectionObserver((es) => {
+                es.forEach(e => { if(e.isIntersecting) e.target.classList.add('opacity-100', 'translate-y-0'); });
+            }, { threshold: 0.1 });
+            sections.forEach(s => {
+                s.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
+                obs.observe(s);
+            });
+        });
+    </script>
+</body>
+</html>
